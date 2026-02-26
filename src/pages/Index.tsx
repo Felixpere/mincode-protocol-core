@@ -1,10 +1,15 @@
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
+import LatestStrip from "../components/LatestStrip";
+import FounderSection from "../components/FounderSection";
 import MusicSection from "../components/MusicSection";
-import ArtistsSection from "../components/ArtistsSection";
+import EventsSection from "../components/EventsSection";
 import RadioSection from "../components/RadioSection";
+import SpacecastSection from "../components/SpacecastSection";
+import ArtistsSection from "../components/ArtistsSection";
+import PlaylistSection from "../components/PlaylistSection";
 import SalesSection from "../components/SalesSection";
-import SubscribeSection from "../components/SubscribeSection";
+import NewsSection from "../components/NewsSection";
 import Footer from "../components/Footer";
 import CustomCursor from "../components/CustomCursor";
 import NoiseOverlay from "../components/NoiseOverlay";
@@ -18,11 +23,16 @@ const Index = () => {
 
       <main>
         <Hero />
+        <LatestStrip />
+        <FounderSection />
         <MusicSection />
-        <ArtistsSection />
+        <EventsSection />
         <RadioSection />
+        <SpacecastSection />
+        <ArtistsSection />
+        <PlaylistSection />
         <SalesSection />
-        <SubscribeSection />
+        <NewsSection />
       </main>
 
       <Footer />

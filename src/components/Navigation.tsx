@@ -3,19 +3,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import TextScramble from "./TextScramble";
 
 const MENU_ITEMS = [
-  { num: "01", label: "HOME" },
-  { num: "02", label: "MUSIC" },
-  { num: "03", label: "RADIO" },
-  { num: "04", label: "VIDEOS" },
-  { num: "05", label: "FOUNDER" },
+  { num: "01", label: "NICOLÁS CETINA" },
+  { num: "02", label: "RELEASES" },
+  { num: "03", label: "EVENTS" },
+  { num: "04", label: "RADIO" },
+  { num: "05", label: "SPACECAST" },
   { num: "06", label: "ARTISTS" },
-  { num: "07", label: "MERCH" },
-  { num: "08", label: "NEWS" },
-  { num: "09", label: "SUBSCRIBE" },
-  { num: "10", label: "DEMO" },
-  { num: "11", label: "BOOKINGS" },
-  { num: "12", label: "SALES" },
-  { num: "13", label: "EXCLUSIVE" },
+  { num: "07", label: "PLAYLIST" },
+  { num: "08", label: "SALES" },
+  { num: "09", label: "NEWS" },
+  { num: "10", label: "SUBSCRIBE" },
+  { num: "11", label: "DEMO & BOOKINGS" },
 ];
 
 interface NavigationProps {
@@ -57,9 +55,12 @@ const Navigation = ({ onNavigate }: NavigationProps) => {
       </button>
 
       {/* Logo */}
-      <div className="fixed top-6 left-6 z-[10001]">
+      <div className="fixed top-6 left-6 z-[10001] flex items-baseline gap-2">
         <span className="font-display text-lg tracking-[0.2em] text-foreground">
           MINCODE
+        </span>
+        <span className="text-xs font-mono text-muted-foreground tracking-wider">
+          × Nicolás Cetina
         </span>
       </div>
 

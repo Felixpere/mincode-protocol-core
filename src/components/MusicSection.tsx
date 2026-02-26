@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const FILTERS = ["ALL", "RELEASES", "EPs", "ALBUMS"];
+const FILTERS = ["ALL", "EPs", "VA"];
 
 const RELEASES = [
   { id: 1, title: "PROTOCOLO 001", artist: "KRVN", type: "EP", year: "2025" },
-  { id: 2, title: "FRECUENCIA NULA", artist: "OXIDUM", type: "ALBUM", year: "2025" },
-  { id: 3, title: "TENSIÓN DIRECTA", artist: "MINCODE", type: "RELEASE", year: "2024" },
+  { id: 2, title: "FRECUENCIA NULA", artist: "OXIDUM", type: "VA", year: "2025" },
+  { id: 3, title: "TENSIÓN DIRECTA", artist: "MINCODE", type: "EP", year: "2024" },
   { id: 4, title: "SEÑAL ROTA", artist: "VRTX", type: "EP", year: "2024" },
-  { id: 5, title: "CIRCUITO MUERTO", artist: "DRKNSS", type: "RELEASE", year: "2024" },
-  { id: 6, title: "RUIDO INDUSTRIAL", artist: "FRAGMENTO", type: "ALBUM", year: "2024" },
+  { id: 5, title: "CIRCUITO MUERTO", artist: "DRKNSS", type: "VA", year: "2024" },
+  { id: 6, title: "RUIDO INDUSTRIAL", artist: "FRAGMENTO", type: "EP", year: "2024" },
 ];
 
 const MusicSection = () => {
@@ -18,16 +18,15 @@ const MusicSection = () => {
   const filtered = filter === "ALL"
     ? RELEASES
     : RELEASES.filter(r => {
-        if (filter === "RELEASES") return r.type === "RELEASE";
         if (filter === "EPs") return r.type === "EP";
-        if (filter === "ALBUMS") return r.type === "ALBUM";
+        if (filter === "VA") return r.type === "VA";
         return true;
       });
 
   return (
-    <section id="music" className="py-24 px-6 md:px-16">
+    <section id="releases" className="py-24 px-6 md:px-16">
       <div className="flex items-baseline justify-between mb-12 border-b border-border pb-4">
-        <h2 className="font-display text-3xl md:text-5xl tracking-tight">MUSIC</h2>
+        <h2 className="font-display text-3xl md:text-5xl tracking-tight">RELEASES</h2>
         <div className="flex gap-1">
           {FILTERS.map((f) => (
             <button
