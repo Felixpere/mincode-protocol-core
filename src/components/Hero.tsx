@@ -43,8 +43,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom section */}
-      <div className="relative z-10 space-y-6 pb-8">
-        <WaveformVisualizer />
+      <div className="relative z-10 pb-8">
         <Marquee />
       </div>
     </section>
