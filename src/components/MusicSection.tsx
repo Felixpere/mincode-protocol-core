@@ -54,7 +54,6 @@ const MusicSection = () => {
             viewport={{ once: true }}
             className="bg-background p-6 group crt-hover"
           >
-            {/* Album art placeholder */}
             <div className="aspect-square bg-muted mb-4 overflow-hidden relative">
               <div
                 className="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-300"
@@ -72,6 +71,14 @@ const MusicSection = () => {
                 <span className="text-xs text-muted-foreground">{release.year}</span>
                 <span className="text-xs text-primary font-mono">{release.type}</span>
               </div>
+              <a
+                href="https://mincode.bandcamp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block pt-3 text-xs font-mono tracking-[0.15em] text-accent hover:text-primary transition-colors"
+              >
+                LISTEN ON BANDCAMP →
+              </a>
             </div>
           </motion.div>
         ))}

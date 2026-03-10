@@ -26,9 +26,9 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight mb-8">
-            <TextScramble text="LA FRECUENCIA" delay={500} />
+            <TextScramble text="TECHNO" delay={500} />
             <br />
-            <TextScramble text="ABSOLUTA" delay={900} />
+            <TextScramble text="CONCEPT" delay={900} />
           </h1>
 
           <p className="text-primary font-mono text-sm md:text-base tracking-[0.15em] max-w-xl mb-6">
