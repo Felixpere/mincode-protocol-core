@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import TextScramble from "./TextScramble";
 import Marquee from "./Marquee";
-import WaveformVisualizer from "./WaveformVisualizer";
 import nicolasImg from "@/assets/nicolas-cetina.jpg";
 
 const Hero = () => {
