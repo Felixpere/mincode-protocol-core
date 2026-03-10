@@ -7,6 +7,8 @@ const ARTISTS = [
   { id: 3, name: "VRTX", origin: "MEDELLÍN, CO", bio: "Hardware live act. Máquinas analógicas procesadas a través de cadenas de efectos destructivos.", links: ["SoundCloud", "YouTube"] },
   { id: 4, name: "DRKNSS", origin: "BOGOTÁ, CO", bio: "Explorador de frecuencias sub-bajas y diseño sonoro extremo. Cada set es una experiencia física.", links: ["Bandcamp", "SoundCloud"] },
   { id: 5, name: "FRAGMENTO", origin: "CALI, CO", bio: "Artista multidisciplinario. Performance audiovisual que integra noise, techno y arte generativo.", links: ["Instagram", "Bandcamp"] },
+  { id: 6, name: "ENIGMATRAX", origin: "NETHERLANDS", bio: "Bio coming soon. Enigmatic force in the European techno underground.", links: ["SoundCloud", "Instagram"] },
+  { id: 7, name: "KOOPA", origin: "DOMINICAN REPUBLIC / MADRID", bio: "Bio coming soon. Bridging Caribbean energy with Madrid's industrial techno scene.", links: ["SoundCloud", "Instagram"] },
 ];
 
 const ArtistsSection = () => {
