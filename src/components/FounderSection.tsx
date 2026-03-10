@@ -1,24 +1,16 @@
 import { motion } from "framer-motion";
 import TextScramble from "./TextScramble";
-
-const SHOWS = [
-  { date: "2026.03.15", city: "BOGOTÁ", venue: "WAREHOUSE X" },
-  { date: "2026.04.02", city: "BERLÍN", venue: "TRESOR" },
-  { date: "2026.04.18", city: "MEDELLÍN", venue: "PLAZA MAYOR" },
-  { date: "2026.05.10", city: "AMSTERDAM", venue: "SHELTER" },
-  { date: "2026.06.01", city: "CALI", venue: "CLUB SUBTERRÁNEO" },
-];
+import nicolasImg from "@/assets/nicolas-cetina.jpg";
 
 const FounderSection = () => {
   return (
     <section id="nicolás-cetina" className="py-24">
       {/* Full bleed portrait */}
-      <div className="relative h-[50vh] md:h-[60vh] overflow-hidden border-b border-border">
-        <div
-          className="absolute inset-0"
-          style={{
-            background: "linear-gradient(135deg, hsl(0 0% 6%), hsl(184 100% 47% / 0.04))",
-          }}
+      <div className="relative h-[60vh] md:h-[70vh] overflow-hidden border-b border-border">
+        <img
+          src={nicolasImg}
+          alt="Nicolás Cetina"
+          className="absolute inset-0 w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent z-10" />
         <div className="relative z-20 h-full flex flex-col justify-end p-6 md:p-16">
@@ -49,28 +41,10 @@ const FounderSection = () => {
         {/* Upcoming shows */}
         <div className="bg-background p-6 md:p-16">
           <p className="text-xs text-primary font-mono tracking-[0.3em] mb-6">UPCOMING SHOWS</p>
-          <div className="divide-y divide-border">
-            {SHOWS.map((show, i) => (
-              <motion.a
-                key={i}
-                href="#"
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.05 }}
-                viewport={{ once: true }}
-                className="group flex items-center justify-between py-3 crt-hover relative overflow-hidden"
-              >
-                <div className="absolute left-0 top-0 bottom-0 w-0 bg-accent group-hover:w-1 transition-all duration-200" />
-                <div className="flex gap-4 md:gap-8 items-baseline pl-3">
-                  <span className="text-sm font-mono text-foreground">{show.date}</span>
-                  <span className="text-xs font-mono text-muted-foreground">{show.city}</span>
-                  <span className="text-xs font-mono text-muted-foreground hidden sm:inline">{show.venue}</span>
-                </div>
-                <span className="text-xs font-mono text-accent tracking-wider group-hover:underline">
-                  TICKETS →
-                </span>
-              </motion.a>
-            ))}
+          <div className="flex items-center justify-center h-32">
+            <p className="font-mono text-sm tracking-[0.2em] text-muted-foreground" style={{ color: "hsl(0 0% 33%)" }}>
+              NO SIGNAL YET — PRÓXIMAMENTE
+            </p>
           </div>
         </div>
       </div>
