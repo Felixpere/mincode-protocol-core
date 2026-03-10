@@ -2,20 +2,19 @@ import { motion } from "framer-motion";
 import TextScramble from "./TextScramble";
 import Marquee from "./Marquee";
 import WaveformVisualizer from "./WaveformVisualizer";
+import nicolasImg from "@/assets/nicolas-cetina.jpg";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col justify-between overflow-hidden">
-      {/* Dark animated background */}
-      <div className="absolute inset-0 bg-background">
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg, transparent, transparent 2px, hsl(0 0% 100% / 0.03) 2px, hsl(0 0% 100% / 0.03) 4px)",
-            animation: "scanline 8s linear infinite",
-          }}
+      {/* Full-bleed photo background */}
+      <div className="absolute inset-0">
+        <img
+          src={nicolasImg}
+          alt="Nicolás Cetina"
+          className="w-full h-full object-cover object-top"
         />
+        <div className="absolute inset-0" style={{ backgroundColor: "hsla(0, 0%, 4%, 0.5)" }} />
       </div>
 
       {/* Content */}
