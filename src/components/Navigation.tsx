@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import TextScramble from "./TextScramble";
-import logoImg from "@/assets/LOGO_MINCODE_FONDO_NEGRO.png";
+const logoImg = "/LOGO_MINCODE_FONDO_NEGRO.png";
 
 const MENU_ITEMS = [
   { num: "01", label: "NICOLÁS CETINA" },
