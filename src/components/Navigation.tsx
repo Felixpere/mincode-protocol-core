@@ -61,6 +61,7 @@ const Navigation = ({ onNavigate }: NavigationProps) => {
           src={logoImg}
           alt="MINCODE"
           className="h-12 md:h-14 w-auto object-contain"
+          style={{ mixBlendMode: 'screen', background: 'transparent' }}
         />
         <span className="font-display text-base tracking-[0.2em] text-foreground hidden md:inline">
           MINCODE
