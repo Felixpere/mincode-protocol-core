@@ -56,12 +56,15 @@ const Navigation = ({ onNavigate }: NavigationProps) => {
       </button>
 
       {/* Logo */}
-      <div className="fixed top-6 left-6 z-[10001] flex items-center gap-3">
+      <div className="fixed top-4 left-4 md:top-6 md:left-6 z-[10001] flex items-center gap-3">
         <img
           src={logoImg}
           alt="MINCODE"
-          className="h-10 w-auto object-contain"
+          className="h-12 md:h-14 w-auto object-contain"
         />
+        <span className="font-display text-base tracking-[0.2em] text-foreground hidden md:inline">
+          MINCODE
+        </span>
       </div>
 
       {/* Full screen overlay */}
