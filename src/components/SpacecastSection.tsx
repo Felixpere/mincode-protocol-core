@@ -18,7 +18,7 @@ const SpacecastSection = () => {
         SPACECAST
       </h2>
       <p className="text-sm text-muted-foreground font-mono leading-relaxed max-w-3xl mb-12">
-        Spacecast is a series of sessions dedicated to the exploration of Techno, with the mission of creating a dialogue between the urban environment and music.
+        Spacecast is a series of audiovisual expeditions produced by Mincode, dedicated to the exploration of Techno and its dialogue with the urban environment. Inspired by the narrative of The Midnight Gospel, each episode acts as a portal into simultaneous realities where city architecture and sound design converge. This is not just a set; it is the creation of a world where the mind surrenders to the landscape and the frequency. A journey of total immersion between what you see and what you feel.
       </p>
 
       <div className="columns-1 sm:columns-2 gap-px space-y-px">

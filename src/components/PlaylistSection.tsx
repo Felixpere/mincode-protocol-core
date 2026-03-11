@@ -7,15 +7,15 @@ const PlaylistSection = () => {
 
       <div className="w-full border border-border">
         <iframe
-          style={{ borderRadius: 0 }}
-          src="https://open.spotify.com/embed/playlist/37i9dQZF1DXa8NOEUWPn9W?utm_source=generator&theme=0"
+          style={{ borderRadius: 0, border: "none" }}
+          src="https://open.spotify.com/embed/playlist/1qQY1qFwNAk8sirewOSVD4?utm_source=generator&theme=0"
           width="100%"
-          height="480"
+          height="380"
           frameBorder="0"
           allowFullScreen
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
-          className="bg-background"
+          className="bg-transparent"
         />
       </div>
     </section>

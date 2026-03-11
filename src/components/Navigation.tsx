@@ -56,13 +56,12 @@ const Navigation = ({ onNavigate }: NavigationProps) => {
       </button>
 
       {/* Logo */}
-      <div className="fixed top-6 left-6 z-[10001] flex items-baseline gap-2">
-        <span className="font-display text-lg tracking-[0.2em] text-foreground">
-          MINCODE
-        </span>
-        <span className="text-xs font-mono text-muted-foreground tracking-wider">
-          × Nicolás Cetina
-        </span>
+      <div className="fixed top-6 left-6 z-[10001] flex items-center gap-3">
+        <img
+          src={logoImg}
+          alt="MINCODE"
+          className="h-10 w-auto object-contain"
+        />
       </div>
 
       {/* Full screen overlay */}
