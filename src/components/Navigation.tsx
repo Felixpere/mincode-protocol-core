@@ -11,7 +11,7 @@ const MENU_ITEMS = [
   { num: "05", label: "SPACECAST" },
   { num: "06", label: "ARTISTS" },
   { num: "07", label: "PLAYLIST" },
-  { num: "08", label: "SALES" },
+  { num: "08", label: "MASTERING & MIXING" },
   { num: "09", label: "NEWS" },
   { num: "10", label: "SUBSCRIBE" },
   { num: "11", label: "DEMO & BOOKINGS" },

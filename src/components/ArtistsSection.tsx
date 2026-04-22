@@ -15,7 +15,7 @@ const ArtistsSection = () => {
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
   return (
-    <section id="artists" className="py-24 px-6 md:px-16">
+    <section id="artists" className="py-24 px-6 md:px-16" style={{ display: "none" }}>
       {/* Featured artist */}
       <div className="relative mb-16 h-[40vh] md:h-[50vh] overflow-hidden border border-border">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />

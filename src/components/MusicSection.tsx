@@ -99,6 +99,42 @@ const MusicSection = () => {
         </div>
       </div>
 
+      {/* Featured MIN085 */}
+      <motion.a
+        href="https://mincode.bandcamp.com/album/min085-various-artists-abracadabra"
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="block mb-px bg-background border border-border p-6 md:p-10 group crt-hover relative overflow-hidden"
+      >
+        <span
+          className="absolute top-4 right-4 z-10 text-[10px] md:text-xs font-mono tracking-[0.2em] px-3 py-1.5"
+          style={{ backgroundColor: "#FF3C00", color: "#0A0A0A" }}
+        >
+          COMING APRIL 28
+        </span>
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="aspect-square bg-muted overflow-hidden relative">
+            <div
+              className="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-300"
+              style={{ background: "linear-gradient(135deg, hsl(0 0% 18%), hsl(15 100% 50% / 0.2))" }}
+            />
+            <div className="absolute inset-0 border border-border group-hover:border-primary transition-colors" />
+          </div>
+          <div className="space-y-3">
+            <p className="text-xs font-mono tracking-[0.2em] text-primary">MIN085 — FEATURED</p>
+            <h3 className="font-display text-3xl md:text-5xl tracking-tight">ABRACADABRA</h3>
+            <p className="text-sm font-mono text-muted-foreground">VARIOUS ARTISTS</p>
+            <p className="text-xs font-mono text-muted-foreground">RELEASE DATE — APRIL 28, 2026</p>
+            <span className="inline-block pt-4 text-xs font-mono tracking-[0.2em] text-accent group-hover:text-primary transition-colors">
+              LISTEN →
+            </span>
+          </div>
+        </div>
+      </motion.a>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
         {filtered.map((release, i) => (
           <motion.div
@@ -147,6 +183,18 @@ const MusicSection = () => {
             </div>
           </motion.div>
         ))}
+      </div>
+
+      <div className="flex justify-center mt-12">
+        <a
+          href="https://mincode.bandcamp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border border-foreground text-foreground px-8 py-4 text-xs font-mono tracking-[0.2em] hover:bg-foreground hover:text-background transition-colors crt-hover"
+          style={{ borderRadius: 0 }}
+        >
+          VIEW ALL ON BANDCAMP →
+        </a>
       </div>
     </section>
   );

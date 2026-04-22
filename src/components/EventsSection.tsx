@@ -5,10 +5,19 @@ const EventsSection = () => {
         EVENTS
       </h2>
 
-      <div className="flex items-center justify-center py-24">
-        <p className="font-display text-xl md:text-3xl tracking-wider text-muted-foreground text-center" style={{ color: "hsl(0 0% 20%)" }}>
+      <div className="flex flex-col items-center justify-center py-24 gap-8">
+        <p className="font-mono text-sm md:text-base tracking-[0.2em] text-center" style={{ color: "#555555" }}>
           NO EVENTS SCHEDULED — CHECK BACK SOON
         </p>
+        <a
+          href="https://ra.co/dj/nicolascetina"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border border-foreground text-foreground px-8 py-4 text-xs font-mono tracking-[0.2em] hover:bg-foreground hover:text-background transition-colors crt-hover"
+          style={{ borderRadius: 0 }}
+        >
+          VIEW ON RESIDENT ADVISOR →
+        </a>
       </div>
     </section>
   );
