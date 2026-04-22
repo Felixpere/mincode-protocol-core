@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import TextScramble from "./TextScramble";
-import Marquee from "./Marquee";
 import nicolasImg from "@/assets/nicolas-cetina.jpg";
 
 const Hero = () => {
@@ -29,22 +28,10 @@ const Hero = () => {
             <TextScramble text="CONCEPT" delay={900} />
           </h1>
 
-          <p className="text-primary font-mono text-sm md:text-base tracking-[0.15em] max-w-xl mb-6">
-            <TextScramble
-              text="Protocolo de resistencia sonora — Colombia × Berlín"
-              delay={1400}
-            />
-          </p>
-
           <p className="text-muted-foreground font-mono text-xs md:text-sm leading-relaxed max-w-xl">
             Independent project founded in 2017 by Nicolás Cetina, focused on the development of club-oriented techno and the construction of a solid and coherent identity within electronic music culture.
           </p>
         </motion.div>
-      </div>
-
-      {/* Bottom section */}
-      <div className="relative z-10 pb-8">
-        <Marquee />
       </div>
     </section>
   );
