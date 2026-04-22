@@ -14,9 +14,11 @@ const RadioSection = () => {
       <div className="w-full border border-border">
         <iframe
           width="100%"
-          height="450"
+          height="450px"
+          frameBorder={0}
+          scrolling="no"
           allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/cetinaofficial&color=%2300f0ff&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/cetinaofficial&color=%2300f0ff&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
           title="Cetina Official on SoundCloud"
         />
       </div>

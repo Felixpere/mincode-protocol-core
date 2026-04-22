@@ -117,9 +117,10 @@ const MusicSection = () => {
         </span>
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="aspect-square bg-muted overflow-hidden relative">
-            <div
-              className="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-300"
-              style={{ background: "linear-gradient(135deg, hsl(0 0% 18%), hsl(15 100% 50% / 0.2))" }}
+            <img
+              src="https://f4.bcbits.com/img/a3914927481_16.jpg"
+              alt="MIN085 — Various Artists: Abracadabra"
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
             />
             <div className="absolute inset-0 border border-border group-hover:border-primary transition-colors" />
           </div>
@@ -137,51 +138,30 @@ const MusicSection = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
         {filtered.map((release, i) => (
-          <motion.div
+          <motion.a
             key={release.id}
+            href={release.url}
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: i * 0.1 }}
             viewport={{ once: true }}
-            className="bg-background p-6 group crt-hover"
+            className="bg-background p-6 group crt-hover block border border-[#333333] hover:border-primary transition-colors"
           >
-            <div className="aspect-square bg-muted mb-4 overflow-hidden relative">
-              {!imgErrors[release.id] ? (
-                <img
-                  src={release.cover}
-                  alt={release.title}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                  onError={() => setImgErrors(prev => ({ ...prev, [release.id]: true }))}
-                />
-              ) : (
-                <div
-                  className="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-300"
-                  style={{
-                    background: `linear-gradient(${135 + i * 30}deg, hsl(0 0% 15%), hsl(0 0% 8%))`,
-                  }}
-                />
-              )}
-              <div className="absolute inset-0 border border-border group-hover:border-primary transition-colors" />
-            </div>
-
-            <div className="space-y-1">
-              <p className="text-xs font-mono tracking-[0.15em] text-primary">{release.catalog}</p>
-              <p className="font-display text-sm tracking-wider text-foreground">{release.title}</p>
+            <div className="space-y-2">
+              <p className="text-xs font-mono tracking-[0.15em]" style={{ color: "#00F0FF" }}>{release.catalog}</p>
+              <p className="font-display text-lg tracking-wider text-white">{release.title}</p>
               <p className="text-xs text-muted-foreground font-mono">{release.artist}</p>
               <div className="flex justify-between items-center pt-2">
                 <span className="text-xs text-muted-foreground">{release.year}</span>
-                <span className="text-xs text-primary font-mono">{release.type}</span>
+                <span className="text-xs font-mono" style={{ color: "#00F0FF" }}>{release.type}</span>
               </div>
-              <a
-                href={release.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block pt-3 text-xs font-mono tracking-[0.15em] text-accent hover:text-primary transition-colors"
-              >
+              <span className="block pt-3 text-xs font-mono tracking-[0.15em] text-accent group-hover:text-primary transition-colors">
                 LISTEN →
-              </a>
+              </span>
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
 
