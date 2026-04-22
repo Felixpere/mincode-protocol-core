@@ -1,5 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import cover085 from "@/assets/covers/min085.png";
+import cover084 from "@/assets/covers/min084.png";
+import cover083 from "@/assets/covers/min083.jpg";
+import cover082 from "@/assets/covers/min082.png";
+import cover081 from "@/assets/covers/min081.png";
+import cover080 from "@/assets/covers/min080.png";
+import cover079 from "@/assets/covers/min079.png";
 
 const FILTERS = ["ALL", "EPs", "VA"];
 
@@ -12,7 +19,7 @@ const RELEASES = [
     type: "EP",
     year: "2025",
     url: "https://mincode.bandcamp.com/album/min084-r1ton-oscuro-recuerdo-ep",
-    cover: "https://f4.bcbits.com/img/a0746244640_16.jpg",
+    cover: cover084,
   },
   {
     id: 2,
@@ -22,7 +29,7 @@ const RELEASES = [
     type: "EP",
     year: "2025",
     url: "https://mincode.bandcamp.com/album/min083-nicolas-cetina-nc-282901",
-    cover: "https://f4.bcbits.com/img/a3aborede_16.jpg",
+    cover: cover083,
   },
   {
     id: 3,
@@ -32,7 +39,7 @@ const RELEASES = [
     type: "EP",
     year: "2025",
     url: "https://mincode.bandcamp.com/album/min082-murk-hybrid-tiempos-olvidados",
-    cover: "https://f4.bcbits.com/img/a1234567890_16.jpg",
+    cover: cover082,
   },
   {
     id: 4,
@@ -42,7 +49,7 @@ const RELEASES = [
     type: "EP",
     year: "2025",
     url: "https://mincode.bandcamp.com/album/min081-nicko-shuo-film-camera",
-    cover: "https://f4.bcbits.com/img/a1234567891_16.jpg",
+    cover: cover081,
   },
   {
     id: 5,
@@ -52,7 +59,7 @@ const RELEASES = [
     type: "EP",
     year: "2024",
     url: "https://mincode.bandcamp.com/album/min080-nicolas-cetina-telepatia",
-    cover: "https://f4.bcbits.com/img/a1234567892_16.jpg",
+    cover: cover080,
   },
   {
     id: 6,
@@ -62,13 +69,12 @@ const RELEASES = [
     type: "EP",
     year: "2024",
     url: "https://mincode.bandcamp.com/album/min079-isgang-la-se-al-negra",
-    cover: "https://f4.bcbits.com/img/a1234567893_16.jpg",
+    cover: cover079,
   },
 ];
 
 const MusicSection = () => {
   const [filter, setFilter] = useState("ALL");
-  const [imgErrors, setImgErrors] = useState<Record<number, boolean>>({});
 
   const filtered = filter === "ALL"
     ? RELEASES
@@ -118,7 +124,7 @@ const MusicSection = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="aspect-square bg-muted overflow-hidden relative">
             <img
-              src="https://f4.bcbits.com/img/a3914927481_16.jpg"
+              src={cover085}
               alt="MIN085 — Various Artists: Abracadabra"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
             />
@@ -149,6 +155,15 @@ const MusicSection = () => {
             viewport={{ once: true }}
             className="bg-background p-6 group crt-hover block border border-[#333333] hover:border-primary transition-colors"
           >
+            <div className="aspect-square bg-muted overflow-hidden relative mb-4">
+              <img
+                src={release.cover}
+                alt={`${release.catalog} — ${release.title}`}
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 border border-border group-hover:border-primary transition-colors" />
+            </div>
             <div className="space-y-2">
               <p className="text-xs font-mono tracking-[0.15em]" style={{ color: "#00F0FF" }}>{release.catalog}</p>
               <p className="font-display text-lg tracking-wider text-white">{release.title}</p>
