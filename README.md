@@ -1,73 +1,130 @@
-# Welcome to your Lovable project
+# MINCODE Protocol
 
-## Project info
+Build a dark, brutalist, cyber-industrial music label website called MINCODE. The aesthetic is: black background #0A0A0A, concrete grey #333333, electric blue accent #00F0FF, industrial orange #FF3C00. Typography must be monospaced/grotesk (use Space Mono or IBM Plex Mono from Google Fonts). Zero rounded corners. Zero decorations. Pure tension.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+INTERACTIONS & ANIMATIONS (this is critical):
 
-## How can I edit this code?
+Cursor: custom crosshair cursor that leaves a fading electric blue trail
 
-There are several ways of editing your application.
+Page transitions: glitch effect between all sections (RGB split + scanlines flash for 0.3s)
 
-**Use Lovable**
+All text headings: scramble/decrypt animation on load (characters randomize then resolve into final word)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Hover on any element: subtle CRT scanline flicker overlay
 
-Changes made via Lovable will be committed automatically to this repo.
+Noise grain texture overlay on entire site, animated, opacity 8%
 
-**Use your preferred IDE**
+Scroll: horizontal smooth scroll on desktop for main navigation sections
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+NAVIGATION: Full screen menu overlay on hamburger click. Menu items are massive (80-100px), numbered 01 through 12, stacked vertically. Each item glitches on hover. Items: HOME / MUSIC / RADIO / VIDEOS / FOUNDER / ARTISTS / MERCH / NEWS / SUBSCRIBE / DEMO / BOOKINGS / SALES / EXCLUSIVE
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+HOME SECTION:
 
-Follow these steps:
+Full screen hero, dark video background (use a placeholder dark loop)
+
+Giant scrambling headline: "LA FRECUENCIA ABSOLUTA"
+
+Subtitle in electric blue monospace: "Protocolo de resistencia sonora — Colombia × Berlín"
+
+Bottom ticker/marquee scrolling: "MINIMALISMO · OSCURIDAD · REPETICIÓN · FRICCIÓN · MINIMALISMO · OSCURIDAD ·"
+
+Small animated waveform visualizer at bottom of hero (reactive, bouncing bars in #00F0FF)
+
+MUSIC SECTION:
+
+Grid of releases: each card is square, grayscale image that snaps to color on hover with a glitch frame transition
+
+Filter bar: ALL / RELEASES / EPs / ALBUMS — toggle buttons, no dropdown
+
+ARTISTS SECTION:
+
+Featured artist: full bleed portrait, name in massive type, text overlaid
+
+Below: list view like Drumcode BUT each row expands on click to reveal bio + links + embedded tracks with a smooth accordion animation
+
+Row hover: electric blue left border slides in + row background shifts to #111111
+
+RADIO SECTION:
+
+Active "ON AIR" indicator: pulsing red dot + text
+
+Player bar fixed at bottom of screen: waveform animation while playing, track name scrolling marquee
+
+Set cards in a horizontal scroll carousel
+
+SALES SECTION (Hardware Boutique):
+
+Product cards: square format, product image, name, "X/XX AVAILABLE" counter in orange
+
+Sold out state: red overlay + "SIGNAL DEAD" text
+
+Add to cart interaction: button glitches then confirms
+
+VIDEOS SECTION:
+
+Masonry or staggered grid layout
+
+Video thumbnails: grayscale, on hover color returns + play button morphs in
+
+SUBSCRIBE SECTION:
+
+Single centered email input, brutalist style, full width underline only (no border box)
+
+Submit button: "CONECTAR AL PROTOCOLO"
+
+On submit: terminal-style confirmation text types itself out letter by letter
+
+DEMO & BOOKINGS:
+
+Minimal forms, dark inputs, monospace labels
+
+Field focus: electric blue bottom border animation
+
+EXCLUSIVE CONTENT:
+
+Blurred/locked content grid with "MEMBERS ONLY" overlay
+
+Login prompt in center
+
+FOOTER:
+
+Pure black, minimal
+
+Logo left, nav links center, social icons right
+
+One line quote at very bottom: "Minimalismo como disciplina. Oscuridad como lienzo. Repetición como mantra."
+
+TECHNICAL:
+
+Fully responsive mobile-first
+
+React + Tailwind
+
+Framer Motion for all animations
+
+No white backgrounds anywhere, ever
+
+Mobile nav: same full-screen overlay menu
+
+This project was built with [Lovable](https://lovable.dev).
+
+**Live app**: https://mincode-protocol-core.lovable.app
+
+## Build with Lovable
+
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/94ec5e35-ed33-449e-98c5-18293d8aea07).
+
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+git clone <this-repository-url>
+cd <repository-name>
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
